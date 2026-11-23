@@ -1,0 +1,7 @@
+.category-shop {
+  width: 100%;
+  margin: clamp(2rem, 5vw, 4rem) 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}

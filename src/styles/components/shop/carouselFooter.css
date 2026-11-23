@@ -1,0 +1,56 @@
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  z-index: 10;
+  bottom: clamp(16px, 3vh, 30px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: clamp(6px, 1vw, 8px);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  background: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 24px;
+  background: #333;
+}
+
+/* Counter */
+.carousel-counter {
+  position: absolute;
+  z-index: 10;
+  bottom: clamp(16px, 3vh, 30px);
+  right: clamp(8px, 5%, 56px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.counter-line {
+  width: 35px;
+  height: 1px;
+  background: #333;
+}
+
+@media (max-width: 768px) {
+  .carousel-dots {
+    bottom: 18px;
+  }
+
+  .carousel-counter {
+    display: none;
+  }
+}

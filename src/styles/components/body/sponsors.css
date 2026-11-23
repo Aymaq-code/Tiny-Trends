@@ -1,0 +1,226 @@
+.sponsors {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  margin: clamp(4rem, 9vw, 8rem) 0;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 4vw, 3rem);
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 5% 10%, rgb(223 118 110 / 10%), transparent 32%),
+    radial-gradient(circle at 95% 90%, rgb(250 229 217 / 75%), transparent 35%),
+    var(--bg-secondary);
+
+  /* border: 1px solid var(--border-soft); */
+  /* border-radius: 28px; */
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   BRAND GRID
+========================= */
+
+.sponsors__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+/* =========================
+   BRAND ITEM
+========================= */
+
+.sponsor-item {
+  position: relative;
+  min-height: 125px;
+  padding: 20px 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  background: rgb(255 255 255 / 65%);
+  border: 1px solid rgb(240 227 220 / 90%);
+  border-radius: 18px;
+
+  transition:
+    transform 250ms ease,
+    background 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.sponsor-index {
+  position: absolute;
+  top: 12px;
+  left: 13px;
+
+  color: var(--color-subtle);
+  font-size: 0.62rem;
+  font-weight: 700;
+  opacity: 0.55;
+}
+
+.sponsor-wordmark {
+  color: var(--text-brand-muted);
+  font-size: clamp(1rem, 1.6vw, 1.45rem);
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  text-align: center;
+  overflow-wrap: anywhere;
+
+  transition:
+    color 250ms ease,
+    transform 250ms ease;
+}
+
+.sponsor-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  opacity: 0.45;
+  transition:
+    transform 250ms ease,
+    opacity 250ms ease;
+}
+
+/* Hover */
+
+@media (hover: hover) {
+  .sponsor-item:hover {
+    transform: translateY(-6px);
+    background: var(--bg-surface);
+    border-color: rgb(223 118 110 / 35%);
+    box-shadow: var(--shadow-md);
+  }
+
+  .sponsor-item:hover .sponsor-wordmark {
+    color: var(--accent-deep);
+    transform: scale(1.04);
+  }
+
+  .sponsor-item:hover .sponsor-dot {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.sponsors__footer {
+  width: min(100%, 350px);
+  margin-top: clamp(2rem, 4vw, 3rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.sponsors__footer span {
+  flex: 1;
+  height: 1px;
+  background: var(--border-soft);
+}
+
+.sponsors__footer p {
+  color: var(--text-tertiary);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .sponsors__container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sponsor-item {
+    min-height: 115px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+  .sponsors {
+    margin: 3.5rem 0;
+    padding: 2.5rem 1rem;
+    border-radius: 22px;
+  }
+
+  .sponsors__container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .sponsor-item {
+    min-height: 105px;
+    padding: 18px 8px;
+    border-radius: 15px;
+  }
+
+  .sponsor-wordmark {
+    font-size: clamp(0.95rem, 4vw, 1.25rem);
+  }
+
+  .sponsors__footer {
+    margin-top: 2rem;
+    gap: 8px;
+  }
+
+  .sponsors__footer p {
+    font-size: 0.55rem;
+    letter-spacing: 0.09em;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 340px) {
+  .sponsors {
+    padding: 2rem 0.75rem;
+  }
+
+  .sponsor-item {
+    min-height: 90px;
+  }
+
+  .sponsor-index {
+    top: 8px;
+    left: 9px;
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .sponsor-item,
+  .sponsor-wordmark,
+  .sponsor-dot {
+    transition: none;
+  }
+}

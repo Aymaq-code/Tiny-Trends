@@ -1,0 +1,147 @@
+.clientSay_card {
+  display: flex;
+  justify-content: flex-start;
+  width: 85%;
+  margin-inline: auto;
+  overflow: hidden;
+  position: relative;
+  container-type: inline-size;
+}
+
+.clientSay_card ul {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+
+  width: max-content;
+  padding: 30px 7px 35px;
+  margin: 0;
+
+  list-style: none;
+  will-change: transform;
+  box-sizing: border-box;
+}
+
+.clientSay_card ul::-webkit-scrollbar {
+  display: none;
+}
+
+/* Testimonial card */
+.clientSay_card ul li {
+  flex: 0 0 calc((100cqi - 4.5rem - 14px) / 4);
+
+  min-width: 0;
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--color-white);
+  border: 1px solid var(--border-color);
+  /* border-radius: 18px; */
+  box-shadow: var(--shadow-sm);
+}
+
+/* Profile section */
+.clientSay_card .clientSay_card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.clientSay_card .clientSay_profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.clientSay_card .clientSay_profile-image {
+  position: relative;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.clientSay_card .clientSay_profile-image img {
+  object-fit: cover;
+}
+
+.clientSay_card .client-name {
+  font-weight: 600;
+  font-size: var(--type-small);
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.clientSay_card .clientSay_profile span {
+  display: block;
+  margin-top: 5px;
+
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Rating */
+.clientSay_card .clientSay_rating {
+  flex-shrink: 0;
+  color: #f4b740;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.clientSay_card .clientSay_rating span {
+  color: #d9d9d9;
+}
+
+/* Quote icon */
+.clientSay_card .clientSay_quote {
+  margin-top: 25px;
+  color: var(--color-peach);
+}
+
+.clientSay_card .clientSay_quote svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Comment */
+.clientSay_card .client-comemnt {
+  font-size: 13px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--text-secondary);
+
+  margin: 12px 0 0;
+}
+
+/* Responsive */
+/* Tablet: 2 Cards */
+@media (max-width: 900px) {
+  .clientSay_card {
+    width: 92%;
+  }
+
+  .clientSay_card ul li {
+    flex-basis: calc((100cqi - 1.5rem - 14px) / 2);
+  }
+}
+
+/* Mobile: 1 Card */
+@media (max-width: 550px) {
+  .clientSay_card {
+    width: 100%;
+  }
+
+  .clientSay_card ul {
+    gap: 1rem;
+  }
+
+  .clientSay_card ul li {
+    flex-basis: calc(100cqi - 14px);
+    padding: 20px;
+  }
+}

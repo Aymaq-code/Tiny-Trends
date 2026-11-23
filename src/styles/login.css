@@ -1,0 +1,118 @@
+.login {
+  margin-top: 1rem;
+  margin-bottom: 8rem;
+  min-height: calc(100dvh - 100px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 1rem;
+
+  background: linear-gradient(135deg, #f6f2fb 0%, #e7e0f4 55%, #d6cdea 100%);
+}
+
+.login__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  width: min(100%, 440px);
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem);
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  box-shadow:
+    0 1px 2px rgba(30, 24, 54, 0.04),
+    0 24px 48px -12px rgba(30, 24, 54, 0.16);
+}
+
+.login__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.login__loading {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  opacity: 0.75;
+}
+
+.login__sign-in-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  padding: 0.85rem 1.5rem;
+  min-height: 48px;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  color: var(--text-brand-muted);
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--text-tertiary) 22%, transparent);
+  border-radius: 999px;
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.login__sign-in-btn:hover {
+  background: #fff;
+  border-color: color-mix(in srgb, var(--text-tertiary) 40%, transparent);
+  box-shadow: 0 8px 22px -8px rgba(30, 24, 54, 0.22);
+  transform: translateY(-1px);
+}
+
+.login__sign-in-btn:focus-visible {
+  outline: 2px solid var(--accent-deep, #7c5cff);
+  outline-offset: 3px;
+}
+
+.login__sign-in-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.login__sign-in-btn span {
+  white-space: nowrap;
+}
+
+.login__error {
+  color: #b3261e;
+  background: #fdecea;
+  border: 1px solid #f5c6c2;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .login__sign-in-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+  .login__sign-in-btn span {
+    white-space: normal;
+  }
+}

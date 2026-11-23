@@ -1,0 +1,52 @@
+/* Left Overlay Text */
+.carousel-overlay {
+  position: absolute;
+  z-index: 2;
+  top: clamp(0px, 5vh, 0px);
+  left: clamp(0px, 3vw, 0px);
+  width: min(30%, 300px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.carousel-overlay span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #333;
+}
+
+.carousel-overlay h2 {
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 700;
+  margin: 0;
+  color: #111;
+}
+
+.carousel-overlay p {
+  font-size: clamp(12px, 1vw, 14px);
+  line-height: 1.5;
+  color: #666;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel-overlay {
+    top: 12px;
+    left: 5%;
+    width: 90%;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .carousel-overlay h2 {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .carousel-overlay p {
+    max-width: 420px;
+    margin-top: 4px;
+  }
+}

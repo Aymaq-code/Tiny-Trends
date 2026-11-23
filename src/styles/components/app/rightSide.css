@@ -1,0 +1,188 @@
+.hero-right {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  max-height: 600px;
+
+  overflow: hidden;
+  border: 8px solid rgb(255 255 255 / 72%);
+  border-radius: 50% 50% 28px 28px;
+  background: var(--color-peach);
+  box-shadow: 0 24px 60px rgb(117 73 61 / 13%);
+
+  margin: 0 auto;
+}
+
+.hero-image-frame > *,
+.hero-image-frame {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero-image {
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.hero-sticker {
+  position: absolute;
+  z-index: 2;
+  top: 12%;
+  right: 9%;
+  display: grid;
+  place-content: center;
+  width: clamp(56px, 15vw, 84px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(166 78 72 / 14%);
+  border-radius: 50%;
+  background: var(--color-cream);
+  color: var(--accent-deep);
+  font-size: clamp(0.55rem, 1.8vw, 0.75rem);
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(9deg);
+}
+
+.hero-floating-note {
+  position: absolute;
+  z-index: 2;
+  right: -12px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100% - 20px);
+  padding: 14px 19px;
+  border: 1px solid rgb(241 228 221 / 75%);
+  border-radius: 18px;
+  background: rgb(255 255 255 / 92%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-md);
+  animation: note-float 4.2s ease-in-out infinite;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero-floating-note > span:last-child {
+  display: grid;
+  gap: 2px;
+}
+
+.hero-floating-note strong {
+  color: var(--text-heading);
+  font-size: var(--type-caption);
+}
+
+.hero-floating-note small {
+  color: var(--text-muted);
+  font-size: var(--type-caption);
+}
+
+.hero-floating-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--accent-background);
+  color: var(--accent-deep);
+  font-size: var(--type-heading-sm);
+}
+
+@keyframes note-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-floating-note {
+    animation: none;
+  }
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .hero-right {
+    height: auto;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .hero-image-frame {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 5 / 6;
+  }
+}
+
+/* MOBILE — 768px */
+@media (max-width: 768px) {
+  .hero-image-frame {
+    border-width: 6px;
+  }
+
+  .hero-floating-note {
+    right: 8px;
+    bottom: 16px;
+    gap: 10px;
+    padding: 11px 15px;
+  }
+
+  .hero-floating-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-floating-note {
+    right: 4px;
+    bottom: 12px;
+    gap: 8px;
+    padding: 9px 12px;
+    border-radius: 14px;
+  }
+
+  .hero-floating-note strong,
+  .hero-floating-note small {
+    font-size: 0.7rem;
+  }
+
+  .hero-floating-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ultra-tiny screens: stop overlapping, stack the note under the image */
+@media (max-width: 280px) {
+  .hero-sticker {
+    display: none;
+  }
+
+  .hero-floating-note {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+    animation: none;
+  }
+}

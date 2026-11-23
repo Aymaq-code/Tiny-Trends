@@ -1,0 +1,91 @@
+.next-season-right {
+  width: 50%;
+
+  padding: clamp(30px, 6vw, 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.next-season-right .next-season-right__eyebrow {
+  font-weight: 500;
+  font-size: var(--type-caption);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.next-season-right .next-season-right__eyebrow span:nth-child(1) {
+  width: 22px;
+  height: 2px;
+  background: var(--accent-primary);
+}
+
+.next-season-right .next-season-right__title {
+  display: block;
+  margin: 0;
+  color: var(--text-heading);
+  font-size: clamp(2rem, 1.35rem + 2.5vw, 3.65rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-weight: 750;
+}
+
+.next-season-right .next-season-right__title span:nth-child(1) {
+  color: var(--text-body);
+  font-size: 2.5rem;
+}
+
+.next-season-right .next-season-right__title span:nth-child(2) {
+  color: var(--accent-deep);
+  opacity: 0.9;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.next-season-right .next-season-right__discount {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0;
+  color: var(--accent-deep);
+}
+
+.next-season-right .next-season-right__discount span:nth-child(1) {
+  font-size: var(--type-heading-md);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.next-season-right .next-season-right__discount span:nth-child(2) {
+  font-size: var(--type-body);
+  font-weight: 700;
+}
+
+.next-season-right .next-season-right__text {
+  max-width: 400px;
+  margin: 0;
+  color: var(--text-tertiary);
+  font-size: var(--type-small);
+  line-height: 1.75;
+}
+
+.sale-link {
+  align-self: flex-start;
+  min-height: 46px;
+  margin-top: 7px;
+  padding: 0 20px;
+  font-size: var(--type-caption);
+}
+
+.next-season-right button {
+  margin-top: 1.5rem;
+  width: 30%;
+  padding: 6px 0;
+  font-size: 0.9rem;
+}

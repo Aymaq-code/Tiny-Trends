@@ -1,0 +1,141 @@
+/* =========================================
+   Layout & Background
+   ========================================= */
+.nf-container {
+  min-height: calc(100dvh - 75px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  font-family: var(--font-sans);
+}
+
+@keyframes nf-float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(4rem, 2rem) scale(1.1);
+  }
+}
+
+/* =========================================
+   Card
+   ========================================= */
+.nf-card {
+  background: var(--surface-card);
+  border-radius: var(--radius-4xl);
+  padding: 4rem 2.5rem;
+  max-width: 36rem;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-card);
+  animation: nf-cardAppear 0.6s cubic-bezier(0.2, 0.9, 0.3, 1.1) forwards;
+}
+
+@keyframes nf-cardAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================
+   Typography & Elements
+   ========================================= */
+.nf-badge {
+  display: inline-block;
+  font-size: var(--type-caption);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: var(--accent-background);
+  border: 1px solid var(--color-accent-pale);
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.nf-title {
+  font-family: var(--font-display);
+  font-size: var(--type-heading-md);
+  color: var(--text-heading-black);
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+}
+
+.nf-description {
+  font-size: var(--type-body);
+  color: var(--text-body);
+  margin-bottom: 2.5rem;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* =========================================
+   Button (Uses your primary accent variables)
+   ========================================= */
+.nf-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--btn-gradient);
+  color: var(--text-on-accent);
+  font-weight: 600;
+  font-size: var(--type-body);
+  padding: 0.9rem 2.4rem;
+  border-radius: var(--radius-3xl);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: var(--btn-shadow);
+  border: 1px solid transparent;
+}
+
+.nf-button svg {
+  transition: transform 0.25s ease;
+}
+
+.nf-button:hover {
+  background: var(--btn-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--btn-shadow-hover);
+}
+
+.nf-button:hover svg {
+  transform: translateX(5px);
+}
+
+.nf-button:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: var(--shadow-sm);
+}
+
+.nf-button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   Responsive Adjustments
+   ========================================= */
+@media (max-width: 480px) {
+  .nf-card {
+    padding: 3rem 1.5rem;
+    border-radius: var(--radius-3xl);
+  }
+
+  .nf-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+  }
+}

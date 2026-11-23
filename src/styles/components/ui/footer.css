@@ -1,0 +1,31 @@
+.footer {
+  margin: 0 -1px;
+  padding: 46px clamp(22px, 4.5vw, 64px) 25px;
+  border-radius: 22px 22px 0 0;
+  background: var(--surface-footer);
+  box-shadow: none;
+}
+
+.footer .footerBody {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+@media (max-width: 900px) {
+  .footer .footerBody {
+    flex-direction: column;
+    gap: 38px;
+  }
+
+  .footerLeft,
+  .footerRight {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer {
+    padding: 40px clamp(25px, 4.5vw, 6px) 25px;
+  }
+}

@@ -1,0 +1,23 @@
+.next-season-left {
+  /* border: 2px solid green; */
+  width: 50%;
+
+  position: relative;
+}
+
+.next-season-left img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.sale-image-label {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: rgb(255 250 245 / 91%);
+  color: var(--text-heading);
+  font-size: var(--type-caption);
+  font-weight: 700;
+}

@@ -1,0 +1,16 @@
+.client-say {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.client-say .client-say__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.m {
+  margin: 0;
+}

@@ -1,0 +1,59 @@
+/* Pagination Container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  list-style: none;
+}
+
+/* Pagination Items */
+.page-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 0.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-surface);
+  color: var(--color-muted);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.previous a,
+.next a {
+  border: none;
+  color: var(--color-accent);
+}
+
+.previous a:hover,
+.next a:hover {
+  border-color: none;
+  background: none;
+}
+
+.page-num:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: var(--accent-background);
+}
+
+/* Active Page */
+.active .page-num {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+  pointer-events: none; /* Prevent clicking the active page */
+}
+
+/* Disabled Prev/Next */
+.disabled .page-num {
+  opacity: 0.5;
+  pointer-events: none;
+  background: transparent;
+}

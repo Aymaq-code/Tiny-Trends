@@ -1,0 +1,20 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-heading);
+  font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.55rem);
+  color: var(--color-accent);
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.logo-mark {
+  color: var(--accent-primary);
+  font-size: var(--type-heading-sm);
+  line-height: 1;
+}
+
+.logo:hover {
+  color: var(--accent-hover);
+}

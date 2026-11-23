@@ -1,0 +1,52 @@
+.hero {
+  /* containing block + stacking context for the flowers */
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+
+  min-height: max(520px, min(760px, calc(100svh - 120px)));
+  margin-top: 24px;
+  padding: 60px 80px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  align-items: center;
+  gap: 40px;
+
+  background:
+    radial-gradient(circle at 84% 18%, rgb(255 255 255 / 80%), transparent 23%),
+    var(--surface-hero);
+  border: 1px solid rgb(255 255 255 / 60%);
+  /* border-radius: 32px; */
+}
+
+/* real content sits above the decorative flowers */
+.hero > :not(.flowers) {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    padding: 52px 56px;
+  }
+}
+
+/* Tablet: stack */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    min-height: auto;
+    padding: 44px 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 16px;
+    gap: 40px;
+    padding: 36px clamp(20px, 6vw, 44px) 28px;
+    border-radius: 24px;
+  }
+}

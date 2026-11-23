@@ -1,0 +1,121 @@
+/* Positioned against .hero (which is now position: relative) */
+.flowers {
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* was 10000, which painted over the whole page */
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.flowers svg {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  opacity: 0.55;
+  animation: float 6s ease-in-out infinite both;
+}
+
+.flowers svg:nth-child(1) {
+  top: 4%;
+  left: 2%;
+  animation-delay: 0s;
+}
+.flowers svg:nth-child(2) {
+  top: 10%;
+  left: 17%;
+  animation-delay: 0.4s;
+}
+.flowers svg:nth-child(3) {
+  top: 34%;
+  left: 0%;
+  animation-delay: 0.8s;
+}
+.flowers svg:nth-child(4) {
+  top: 40%;
+  left: 25%;
+  animation-delay: 1.2s;
+}
+.flowers svg:nth-child(5) {
+  top: 65%;
+  left: 17%;
+  animation-delay: 1.6s;
+}
+.flowers svg:nth-child(6) {
+  top: 6%;
+  left: 34%;
+  animation-delay: 2s;
+}
+.flowers svg:nth-child(7) {
+  top: 70%;
+  left: 35%;
+  animation-delay: 2.4s;
+}
+.flowers svg:nth-child(8) {
+  top: 87%;
+  left: 60%;
+  animation-delay: 2.8s;
+}
+.flowers svg:nth-child(9) {
+  top: 0%;
+  right: 38%;
+  animation-delay: 3.2s;
+}
+.flowers svg:nth-child(10) {
+  top: 20%;
+  right: 7%;
+  animation-delay: 3.6s;
+}
+.flowers svg:nth-child(11) {
+  top: 40%;
+  right: 0%;
+  animation-delay: 4s;
+}
+.flowers svg:nth-child(12) {
+  top: 1%;
+  right: 1%;
+  animation-delay: 4.4s;
+}
+.flowers svg:nth-child(13) {
+  top: 89%;
+  right: 0%;
+  animation-delay: 4.8s;
+}
+.flowers svg:nth-child(14) {
+  top: 1%;
+  right: 10%;
+  animation-delay: 5.2s;
+}
+.flowers svg:nth-child(15) {
+  top: 40%;
+  left: 48%;
+  animation-delay: 5.6s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(6deg);
+  }
+}
+
+/* Thin out on small screens to avoid clutter */
+@media (max-width: 900px) {
+  .flowers svg:nth-child(n + 10) {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .flowers svg:nth-child(n + 6) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flowers svg {
+    animation: none;
+  }
+}

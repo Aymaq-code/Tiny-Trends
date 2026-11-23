@@ -1,0 +1,32 @@
+.contact-us {
+  width: min(100% - 3rem, 1200px);
+  min-height: 100vh;
+  margin: 0 auto 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-us {
+    width: min(100% - 2rem, 650px);
+  }
+
+  .contact-us__body {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .contact-body__left {
+    order: 1;
+  }
+
+  .contact-body__right {
+    order: 2;
+  }
+
+  .contact-us__map {
+    height: 300px;
+  }
+}
