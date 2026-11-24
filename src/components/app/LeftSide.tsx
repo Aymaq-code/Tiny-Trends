@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { ShopNowBtn } from "../ui/Buttons";
 import { useHeroAnimation } from "@/src/libs/gsapAnimation";
 import { snigletRegular } from "@/src/app/fonts";
-
 import "../../styles/components/app/leftSide.css";
 
 export default function LeftSide() {

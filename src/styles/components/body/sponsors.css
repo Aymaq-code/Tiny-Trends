@@ -11,8 +11,7 @@
     radial-gradient(circle at 95% 90%, rgb(250 229 217 / 75%), transparent 35%),
     var(--bg-secondary);
 
-  /* border: 1px solid var(--border-soft); */
-  /* border-radius: 28px; */
+  border-radius: 20px;
   box-shadow: var(--shadow-sm);
 
   display: flex;

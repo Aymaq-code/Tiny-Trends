@@ -13,9 +13,12 @@ export default function NewArrivalsProducts() {
   const { isLoading, newProducts, error } = useNewProducts();
   const router = useRouter();
 
-  const cardRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
 
-  useCardRevealAnimation({ scopeRef: cardRef });
+  useCardRevealAnimation({
+    scopeRef: gridRef,
+    dependencies: [isLoading, newProducts],
+  });
 
   function handleShopPage() {
     router.push("/shop");
@@ -48,7 +51,7 @@ export default function NewArrivalsProducts() {
   }
 
   return (
-    <div ref={cardRef} className="new-arrivals" id="new-arrivals">
+    <div ref={gridRef} className="new-arrivals" id="new-arrivals">
       {newProducts.slice(0, 8).map((product) => {
         const hasDiscount = (product.discount ?? 0) > 0;
 

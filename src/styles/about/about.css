@@ -2,6 +2,7 @@
   margin-inline: auto;
   max-width: 80rem;
   padding: 2.5rem 1.5rem 0;
+  border-radius: 20px;
 }
 
 @media (min-width: 768px) {
@@ -21,6 +22,7 @@
     var(--color-background)
   );
   padding: 2rem;
+  border-radius: 20px;
 }
 
 @media (min-width: 768px) {
@@ -143,6 +145,7 @@
   border: 1px solid rgb(255 228 230 / 70%);
   background: linear-gradient(to bottom right, #fff1e6, #fffaf8, #ffe4e6);
   padding: 3rem 1.25rem;
+  border-radius: 20px;
 }
 
 @media (min-width: 768px) {

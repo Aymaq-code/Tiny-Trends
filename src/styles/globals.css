@@ -107,7 +107,7 @@
   --type-lead: clamp(1.02rem, 0.96rem + 0.3vw, 1rem);
   --type-heading-sm: clamp(1.15rem, 1.12rem + 0.62vw, 1.4rem);
   --type-heading-md: clamp(1.35rem, 1rem + 1.25vw, 2rem);
-  --type-display: clamp(2rem, 1.35rem + 5.1vw, 4rem);
+  --type-display: clamp(2.2rem, 1.55rem + 5.5vw, 4.2rem);
 }
 
 *,

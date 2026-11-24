@@ -4,6 +4,7 @@
   isolation: isolate;
   width: 100%;
   min-height: clamp(260px, 32vw, 350px);
+  border-radius: 20px;
 
   display: flex;
   align-items: center;

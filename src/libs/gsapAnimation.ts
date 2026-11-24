@@ -255,7 +255,7 @@ export function useCardRevealAnimation({
   enabled?: boolean;
   selector?: string;
   start?: string;
-  dependencies?: any[];
+  dependencies?: unknown[];
 }) {
   useGSAP(
     () => {
