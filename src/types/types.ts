@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { Dispatch, ReactNode, RefObject, SetStateAction } from "react";
 
 // Main page layout type
@@ -73,7 +74,7 @@ export type Comments = {
   id: number;
   name: string;
   comment: string;
-  photo?: string;
+  photo?: StaticImageData;
   rate?: 1 | 2 | 3 | 4 | 5;
 };
 
@@ -109,7 +110,7 @@ export type CarouselControlsProps = {
 
 // App shop categories type
 export type CategoryCardProps = {
-  image: string;
+  image: StaticImageData;
   alt: string;
   label: string;
   title: string;

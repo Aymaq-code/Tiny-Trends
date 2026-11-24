@@ -7,6 +7,18 @@ import {
   Partners,
   RunwayLook,
 } from "../types/types";
+import IMAGE_1 from "@/public/cat-1.webp";
+import IMAGE_2 from "@/public/cat-2.webp";
+import IMAGE_3 from "@/public/cat-3.webp";
+import IMAGE_4 from "@/public/cat-4.webp";
+import IMAGE_5 from "@/public/clients/client-img-1.jpg";
+import IMAGE_6 from "@/public/clients/client-img-2.jpg";
+import IMAGE_7 from "@/public/clients/client-img-3.jpg";
+import IMAGE_8 from "@/public/clients/client-img-4.jpg";
+import IMAGE_9 from "@/public/clients/client-img-5.jpg";
+import IMAGE_10 from "@/public/clients/client-img-6.jpg";
+import IMAGE_11 from "@/public/clients/client-img-7.jpg";
+import IMAGE_12 from "@/public/clients/client-img-8.jpg";
 
 // Navigation links
 export const navLinks: NavLinksType[] = [
@@ -28,43 +40,42 @@ export const partners: Partners[] = [
 // App shop categories
 export const categories: CategoryCardProps[] = [
   {
-    image: "/cat-1.png",
+    image: IMAGE_1,
     alt: "Boys fashion collection",
     label: "EXPLORE COLLECTION",
     title: "Little Boys",
     description: "Everyday styles for little adventurers.",
     className: "cat-card cat-card-large",
-    href: "/",
+    href: "/shop",
   },
   {
-    image: "/cat-2.png",
+    image: IMAGE_2,
     alt: "Girls fashion collection",
     label: "NEW COLLECTION",
     title: "Little Girls",
     description: "Cute looks, big personalities.",
     className: "cat-card cat-card-middle",
-    href: "/",
+    href: "/shop",
   },
   {
-    image: "/cat-3.png",
+    image: IMAGE_3,
     alt: "Baby girl clothing",
     label: "ADORABLE STYLES",
     title: "Baby Girls",
     description: "Little outfits, endless smiles.",
     className: "cat-card cat-card-small",
-    href: "/",
+    href: "/shop",
   },
   {
-    image: "/cat-4.png",
+    image: IMAGE_4,
     alt: "Baby boy clothing",
     label: "LITTLE FAVORITES",
     title: "Baby Boys",
     description: "Comfort meets cuteness.",
     className: "cat-card cat-card-small",
-    href: "/",
+    href: "/shop",
   },
 ];
-
 export const announcements = [
   "NEW SEASON, NEW LITTLE STYLES",
   "FRESH LOOKS FOR LITTLE ADVENTURERS",
@@ -79,7 +90,7 @@ export const comments: Comments[] = [
     name: "Alex Jason",
     comment:
       "Amazing service! Everything was perfect, and I really enjoyed the experience.",
-    photo: "https://i.postimg.cc/T1N9dr3j/client-img-6.jpg",
+    photo: IMAGE_5,
     rate: 5,
   },
   {
@@ -87,7 +98,7 @@ export const comments: Comments[] = [
     name: "Sarah Williams",
     comment:
       "Very professional team. They delivered exactly what I was looking for.",
-    photo: "https://i.postimg.cc/FFPzrPNj/client-img-3.jpg",
+    photo: IMAGE_6,
     rate: 5,
   },
   {
@@ -95,7 +106,7 @@ export const comments: Comments[] = [
     name: "Michael Brown",
     comment:
       "Great quality and excellent customer support. Highly recommended!",
-    photo: "https://i.postimg.cc/B6mSv69P/client-img-1.jpg",
+    photo: IMAGE_7,
     rate: 4,
   },
   {
@@ -103,7 +114,7 @@ export const comments: Comments[] = [
     name: "Emily Johnson",
     comment:
       "I'm really impressed with the attention to detail and overall quality.",
-    photo: "https://i.postimg.cc/KvkGZx9x/client-img-7.jpg",
+    photo: IMAGE_8,
     rate: 5,
   },
   {
@@ -111,7 +122,7 @@ export const comments: Comments[] = [
     name: "Daniel Smith",
     comment:
       "A wonderful experience from beginning to end. I will definitely come back.",
-    photo: "https://i.postimg.cc/FRCv4B3T/client-img-2.jpg",
+    photo: IMAGE_9,
     rate: 5,
   },
   {
@@ -119,7 +130,7 @@ export const comments: Comments[] = [
     name: "Sophia Martinez",
     comment:
       "Excellent work! The team was friendly, helpful, and very professional.",
-    photo: "https://i.postimg.cc/pXFHwkTF/client-img-4.jpg",
+    photo: IMAGE_10,
     rate: 4,
   },
   {
@@ -127,7 +138,7 @@ export const comments: Comments[] = [
     name: "James Wilson",
     comment:
       "Everything exceeded my expectations. Great service and outstanding results.",
-    photo: "https://i.postimg.cc/25zNBDxy/client-img-5.jpg",
+    photo: IMAGE_11,
     rate: 5,
   },
   {
@@ -135,7 +146,7 @@ export const comments: Comments[] = [
     name: "Olivia Davis",
     comment:
       "Really happy with the results. The entire process was smooth and easy.",
-    photo: "https://i.postimg.cc/43Bk6SLG/client-img-8.jpg",
+    photo: IMAGE_12,
     rate: 5,
   },
 ];

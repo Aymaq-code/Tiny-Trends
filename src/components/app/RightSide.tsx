@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import IMAGE from "@/public/Firefly.png";
 import { useRef } from "react";
 import { useHeroAnimation } from "@/src/libs/gsapAnimation";
+
 import "../../styles/components/app/rightSide.css";
 
 export default function RightSide() {
@@ -19,7 +21,7 @@ export default function RightSide() {
           inside
         </span>
         <Image
-          src="/Firefly.png"
+          src={IMAGE}
           alt="A smiling child in a pink outfit carrying colorful shopping bags"
           fill
           sizes="(max-width: 900px) 100vw, 50vw"
